@@ -14,28 +14,31 @@
     <MDBCollapse id="navbarNav" v-model="collapse">
       <MDBNavbarNav class="me-auto">
         <MDBNavbarItem>
-          <router-link
-            to="/"
-            :class="['nav-link-custom', { active: $route.name === 'Home' }]"
+          <MDBNavbarLink 
+            @click="$router.push('/')" 
+            :class="{ active: $route.name === 'Home' }"
+            class="nav-link-custom"
           >
             Accueil
-          </router-link>
+          </MDBNavbarLink>
         </MDBNavbarItem>
         <MDBNavbarItem>
-          <router-link
-            to="/services"
-            :class="['nav-link-custom', { active: $route.name === 'Services' }]"
+          <MDBNavbarLink 
+            @click="$router.push('/services')" 
+            :class="{ active: $route.name === 'Services' }"
+            class="nav-link-custom"
           >
             Services
-          </router-link>
+          </MDBNavbarLink>
         </MDBNavbarItem>
         <MDBNavbarItem>
-          <router-link
-            to="/portfolio"
-            :class="['nav-link-custom', { active: $route.name === 'Portfolio' }]"
+          <MDBNavbarLink 
+            @click="$router.push('/portfolio')" 
+            :class="{ active: $route.name === 'Portfolio' }"
+            class="nav-link-custom"
           >
             Portfolio
-          </router-link>
+          </MDBNavbarLink>
         </MDBNavbarItem>
       </MDBNavbarNav>
 
@@ -94,6 +97,7 @@ import {
   MDBNavbarItem, 
   MDBCollapse,
   MDBBtn,
+  MDBIcon,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,

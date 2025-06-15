@@ -182,11 +182,16 @@
         </div>
       </MDBContainer>
     </section>
+
+    <LoginModal v-model="showLoginModal" />
+
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import LoginModal from '../components/LoginModal.vue'
+
 import {
   MDBContainer,
   MDBRow,
